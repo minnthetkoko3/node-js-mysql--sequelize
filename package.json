@@ -1,0 +1,24 @@
+{
+  "name": "node-js--mysql-sequelize",
+  "description": "Node js mysql sequelize example.",
+  "author": "Mg Wunna",
+  "license": "MIT",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "private": "true",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon -q -x \"clear && node src/server.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mg-wunna/node-js--mysql-sequelize.git"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.25.8"
+  }
+}
+
