@@ -1,9 +1,9 @@
-import Sequelize from 'sequelize';
+import Sequelize from "sequelize";
 
-import sequelize from '../configs/database.config.js';
+import sequelize from "../configs/database.config.js";
 
 // ✔ create product model using sequelize
-const ProductsModel = sequelize.define('products', {
+const ProductsModel = sequelize.define("products", {
   id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,

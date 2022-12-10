@@ -1,18 +1,23 @@
-import ProductsModel from '../models/products.model.js';
+import ProductsModel from "../models/products.model.js";
 
 const productController = {
   create: async ({ title, price, imageUrl, description }) => {
-    const result = await ProductsModel.create({ title, price, imageUrl, description });
+    const result = await ProductsModel.create({
+      title,
+      price,
+      imageUrl,
+      description,
+    });
     if (result) return result.dataValues;
   },
-  findAll: async condition => {
+  findAll: async (condition) => {
     const result = await ProductsModel.findAll(condition);
     if (result) {
-      const products = result.map(data => data.dataValues);
+      const products = result.map((data) => data.dataValues);
       return products;
     }
   },
-  findById: async productID => {
+  findById: async (productID) => {
     const result = await ProductsModel.findByPk(productID);
     if (result) return result.dataValues;
   },
@@ -26,7 +31,7 @@ const productController = {
       return (await result.save()).dataValues;
     }
   },
-  delete: async productID => {
+  delete: async (productID) => {
     let result = await ProductsModel.findByPk(productID);
     if (result) {
       result = await result.destroy();

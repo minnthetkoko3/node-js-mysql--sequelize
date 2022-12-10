@@ -1,11 +1,11 @@
-import 'dotenv/config';
-import database from './configs/database.config.js';
-import productController from './controllers/products.controller.js';
+import "dotenv/config";
+import database from "./configs/database.config.js";
+import productController from "./controllers/products.controller.js";
 
 database
   .sync()
-  .then(_ => {
-    console.log('Connect mysql database success.');
+  .then((_) => {
+    console.log("Connect mysql database success.");
 
     // ✔ save product data
     /*
@@ -58,6 +58,6 @@ database
       .catch(error => console.log(error));
     */
   })
-  .catch(error => {
+  .catch((error) => {
     console.log(error);
   });
